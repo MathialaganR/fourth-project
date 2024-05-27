@@ -1,0 +1,19 @@
+name: First Work Project No4
+on: push
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get codes
+              uses: actions/checkout@v2
+            - name: Install Dependencies
+              run: |
+                - npm i prop-types
+                - npm i react
+                - npm i react-dom
+            - name: Linting
+              run: eslint --ext .jsx --fix src
+            - name: Build
+              run: vite build
+            - name: Test
+              run: vitest run
