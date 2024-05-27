@@ -8,6 +8,7 @@ jobs:
               uses: actions/checkout@v2
             - name: Install Dependencies
               run: |
+                - npm install
                 - npm i prop-types
                 - npm i react
                 - npm i react-dom
