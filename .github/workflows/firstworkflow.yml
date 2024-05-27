@@ -13,8 +13,9 @@ jobs:
             - name: Install dependencies
               run: |
                 npm ci
+                npm install eslint
             - name: Linting
-              run: eslint --ext .jsx --fix src
+              run: npm r
             - name: Build
               run: vite build
             - name: Test
