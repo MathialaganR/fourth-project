@@ -1,0 +1,12 @@
+name: Issue Trigger
+on:
+  issues:
+    types: [opened, edited, milestoned]
+jobs:
+    fourth-project:
+        runs-on: ubuntu-latest
+        # outputs:
+        #   matrix: ${{ steps.set-matrix.outputs.matrix }}
+        steps:
+            - name: Get Events
+              run: echo {{ toJSON(github.event) }}
