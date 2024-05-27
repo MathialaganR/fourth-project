@@ -8,5 +8,5 @@ jobs:
         # outputs:
         #   matrix: ${{ steps.set-matrix.outputs.matrix }}
         steps:
-            - name: Get Events
-              run: echo "${{ toJSON(github.event) }}""
+          - name: Get Events
+            run: echo "${{ toJSON(github.event) }}"
