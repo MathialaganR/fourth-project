@@ -1,7 +1,7 @@
 name: First Work Project No4
 on: push
 jobs:
-    test:
+    fourth-project:
         runs-on: ubuntu-latest
         steps:
             - name: Get codes
@@ -12,11 +12,14 @@ jobs:
                 node-version: 16
             - name: Install dependencies
               run: |
-                prop-types
-                
+                npm i prop-types
+                npm i react
+                npm i react-dom
             - name: Linting
               run: eslint --ext .jsx --fix src
             - name: Build
               run: vite build
             - name: Test
               run: vitest run
+            - name: Deploy
+              run: echo "Deployment success"
