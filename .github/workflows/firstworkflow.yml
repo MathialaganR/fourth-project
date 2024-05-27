@@ -12,9 +12,7 @@ jobs:
                 node-version: 16
             - name: Install dependencies
               run: |
-                npm i prop-types
-                npm i react
-                npm i react-dom
+                npm ci
             - name: Linting
               run: eslint --ext .jsx --fix src
             - name: Build
